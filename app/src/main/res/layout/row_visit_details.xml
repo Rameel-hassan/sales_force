@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_7dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tv_serialNum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_3dp"
+            android:layout_weight=".04"
+            android:gravity=""
+            android:maxLines="1"
+            android:text="@string/customer_name"
+            android:textColor="@color/colorPrimary" />
+        <TextView
+            android:id="@+id/tv_customer_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".4"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin_3dp"
+            android:text="@string/customer_name" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".004"
+            android:background="@color/dividerColor"/>
+        <TextView
+            android:id="@+id/tv_visit_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".07"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin_3dp"
+            android:text="Visit Type"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".004"
+            android:background="@color/dividerColor"/>
+
+        <TextView
+            android:id="@+id/tv_visit_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".49"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:maxLines="1"
+            android:text="@string/visit_time" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="oppo.permission.OPPO_COMPONENT_SAFE" />
+    <uses-permission android:name="com.huawei.permission.external_app_settings.USE_COMPONENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".base.SFApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/sales_automation_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/sales_automation_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="m">
+        <activity
+            android:name=".activity.TargetedSchoolsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddTargetedProduct"
+            android:exported="false"
+            android:parentActivityName=".activity.DashboardActivity" />
+        <activity
+            android:name=".activity.NotInterestedVisit"
+            android:exported="false"
+            android:parentActivityName=".activity.DashboardActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activity.NearBySchoolsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SyncDataActivity"
+            android:exported="false"
+            android:label="Download Data"
+            android:parentActivityName=".activity.DashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MultiPurposeActivity"
+            android:exported="false"
+            android:label="Multi Purpose Activity"
+            android:parentActivityName=".activity.MultiPurposeActivityMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MapsRoutesActivity"
+            android:exported="false"
+            android:label="@string/map_routes"
+            android:parentActivityName=".activity.DashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MultiPurposeActivityMenu"
+            android:exported="false"
+            android:label="Multi Purpose Activity"
+            android:parentActivityName=".activity.DashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NewDashBoardActivity"
+            android:exported="false"
+            android:label="DashBoard"
+            android:parentActivityName=".activity.DashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.DailyExpenseReport" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <activity
+            android:name=".activity.MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps"
+            android:parentActivityName=".activity.DashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FragmentShownActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+
+            <!-- idr laganana intenet -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.DashboardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.UtilityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ReportsActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.DashboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.DashBoard_Activity"
+            android:exported="false"
+            android:label="DashBoard"
+            android:parentActivityName=".activity.DashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EditSchoolInformation"
+            android:exported="false"
+            android:parentActivityName=".activity.DashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.BooksCollectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SampleHistoryActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.DashboardActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="7c90ee24f9b4af259c8a8a753950e0f19de6f388" />
+
+        <service
+            android:name=".utilities.GPSTrackerService"
+            android:exported="false" />
+        <service
+            android:name=".services.LocationUpdateService"
+            android:exported="true"
+            android:stopWithTask="false" />
+        <service
+            android:name=".services.DBLocationPointsSyncService"
+            android:exported="true"
+            android:stopWithTask="false" />
+
+        <activity
+            android:name=".activity.VisitHistoryActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.DashboardActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="font_10">10sp</dimen>
+    <dimen name="font_11">11sp</dimen>
+    <dimen name="font_12">12sp</dimen>
+    <dimen name="font_13">13sp</dimen>
+    <dimen name="font_14">14sp</dimen>
+    <dimen name="font_15">15sp</dimen>
+    <dimen name="font_16">16sp</dimen>
+    <dimen name="font_18">18sp</dimen>
+    <dimen name="font_20">20sp</dimen>
+    <dimen name="font_25">25sp</dimen>
+
+
+    <!-- UI Width Height -->
+    <dimen name="img">70dp</dimen>
+    <dimen name="dialog_width">250dp</dimen>
+    <dimen name="spn_width">200dp</dimen>
+    <dimen name="spn_height">25dp</dimen>
+    <dimen name="sp_w">300dp</dimen>
+    <dimen name="sp_h">400dp</dimen>
+    <dimen name="sp_t">150dp</dimen>
+    <dimen name="view_width">240dp</dimen>
+    <dimen name="sliding_header">150dp</dimen>
+    <item name="ripple_effect_alpha" format="float" type="dimen">0.4</item>
+    <!-- Floating Edit Text-->
+    <dimen name="floating_edit_text_underline_height">0.5dp</dimen>
+    <dimen name="floating_edit_text_underline_highlighted_height">1dp</dimen>
+
+    <dimen name="cb_layout_width_default">90dp</dimen>
+    <dimen name="cb_layout_height_default">90dp</dimen>
+    <dimen name="cb_main_circle_radius_default">28dp</dimen>
+    <dimen name="cb_main_circle_radius_expanded_default">28dp</dimen>
+    <dimen name="cb_stroke_width_default">12dp</dimen>
+    <dimen name="cb_progress_arc_width_default">8dp</dimen>
+    <dimen name="cb_icon_size_default">28dp</dimen>
+
+</resources>

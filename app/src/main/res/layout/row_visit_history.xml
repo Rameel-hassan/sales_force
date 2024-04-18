@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_border"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_sr_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableEnd="@android:drawable/status_bar_item_background"
+            android:drawableBottom="@drawable/bg_border"
+            android:gravity="center"
+            android:minWidth="25dp"
+            android:padding="2dp"
+            android:text="1"
+            android:textAlignment="gravity"
+            android:textColor="@color/tv_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_visit_date"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableEnd="@android:drawable/status_bar_item_background"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Job Date"
+            android:textAlignment="gravity"
+            android:textColor="@color/tv_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_retailer_name"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableEnd="@android:drawable/status_bar_item_background"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Shop Name"
+            android:textAlignment="gravity"
+            android:textColor="@color/tv_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_purpose_of_visit"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableEnd="@android:drawable/status_bar_item_background"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Purpose"
+            android:textAlignment="gravity"
+            android:textColor="@color/tv_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_visit_type"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableEnd="@android:drawable/status_bar_item_background"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="Visit type"
+            android:textAlignment="gravity"
+            android:textColor="@color/tv_color"
+            android:textSize="12sp" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_address"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:drawableEnd="@android:drawable/status_bar_item_background"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="2dp"-->
+<!--            android:text="Address"-->
+<!--            android:textAlignment="gravity"-->
+<!--            android:textColor="@color/tv_color"-->
+<!--            android:textSize="12sp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_contact_person"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:drawableEnd="@android:drawable/status_bar_item_background"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="2dp"-->
+<!--            android:text="Contact No"-->
+<!--            android:textAlignment="gravity"-->
+<!--            android:textColor="@color/tv_color"-->
+<!--            android:textSize="12sp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_comment"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="2dp"-->
+<!--            android:text="Comment"-->
+<!--            android:textAlignment="gravity"-->
+<!--            android:textColor="@color/tv_color"-->
+<!--            android:textSize="12sp" />-->
+        <ImageButton
+            android:id="@+id/tv_full_details"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_info"
+            android:background="@color/transparent"
+            app:tint="@color/colorPrimary" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "290145426638",
+    "project_id": "gohar-publisher",
+    "storage_bucket": "gohar-publisher.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:290145426638:android:27a8b3ab9074d9ed1e049f",
+        "android_client_info": {
+          "package_name": "com.ibrahim.salesforce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "290145426638-ge3jbag83kkfv9u1k9rro5gofgt8t47e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYUmM74HWW4uiOIYfEv-8kV6m3aaRi3P4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "290145426638-ge3jbag83kkfv9u1k9rro5gofgt8t47e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

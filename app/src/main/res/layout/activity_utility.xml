@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_utility"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_5dp"
+        tools:context="com.ibrahim.salesforce.activity.UtilityActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/commentedittxt_bg"
+            android:text="Only for DEV's use!"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_18"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_1dp"
+                android:background="@color/white" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10dp"
+                android:gravity="center"
+                android:text="@string/update_base_url"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10dp"
+                android:textColor="@color/white"
+                android:text="@string/app_force_close" />
+
+            <AutoCompleteTextView
+                android:id="@+id/multiAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/margin_10dp"
+                android:background="@drawable/edit_text_curve_bg"
+                android:completionThreshold="1"
+                android:hint="@string/start_typing_url"
+                android:inputType="textMultiLine"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="40dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/et_hint_color"
+                android:textSize="@dimen/font_16" />
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="@dimen/margin_10dp"
+                android:background="@drawable/commentedittxt_bg"
+                android:minHeight="0dp"
+                android:padding="@dimen/padding_10dp"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/update" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_1dp"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

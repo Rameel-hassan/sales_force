@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mark_attendance_"
+        android:icon="@drawable/ic_attendance"
+        android:title="Attendance" />
+
+    <item
+        android:id="@+id/school_registration_"
+        android:icon="@drawable/ic_add_new_school"
+        android:title="Vendor Registration" />
+
+   <item
+        android:id="@+id/online_visits_"
+        android:icon="@drawable/ic_my_visits"
+        android:title="Visit Detail" />
+
+</menu>

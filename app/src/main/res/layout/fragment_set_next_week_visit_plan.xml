@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/screenBackground"
+    tools:context=".fragment.SetNextWeekVisitPlanFragment">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/font_10"
+    app:cardCornerRadius="@dimen/font_20">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:layout_marginBottom="@dimen/margin_10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:text="@string/employee_name"
+                android:textSize="@dimen/font_16"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".28"
+                android:background="@drawable/spinner_bg"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_marginRight="@dimen/margin_20dp"
+              >
+
+                <Spinner
+                    android:id="@+id/spnEmployee"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spn_height"
+                    android:spinnerMode="dropdown" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvDayOne_setNextWeekPlan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Today: DayName: " />
+
+                    <EditText
+                        android:id="@+id/etOne_NextWeekPlan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_curve_bg"
+                        android:layout_marginStart="5dp"
+                        android:hint="@string/action_sign_in" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvDayTwo_setNextWeekPlan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Day 2 (DayName)" />
+
+                    <EditText
+                        android:id="@+id/etTwo_NextWeekPlan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_curve_bg"
+
+                        android:layout_marginStart="5dp"
+                        android:hint="@string/enter_plan_details" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvDayThree_setNextWeekPlan"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:text="Day 3 (DayName)" />
+
+                    <EditText
+                        android:id="@+id/etThree_NextWeekPlan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_curve_bg"
+
+                        android:layout_marginStart="5dp"
+                        android:hint="@string/enter_plan_details" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvDayFour_setNextWeekPlan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Day 4 (DayName)" />
+
+                    <EditText
+                        android:id="@+id/etFour_NextWeekPlan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/edit_text_curve_bg"
+
+                        android:hint="@string/enter_plan_details" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvDayFive_setNextWeekPlan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Day 5 (DayName)" />
+
+                    <EditText
+                        android:id="@+id/etFive_NextWeekPlan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/edit_text_curve_bg"
+
+                        android:hint="@string/enter_plan_details" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvDaySix_setNextWeekPlan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Day 6 (DayName)" />
+
+                    <EditText
+                        android:id="@+id/etSix_NextWeekPlan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/edit_text_curve_bg"
+
+                        android:hint="@string/enter_plan_details" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tvDaySeven_setNextWeekPlan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Day 7 (DayName)" />
+
+                    <EditText
+                        android:id="@+id/etSeven_NextWeekPlan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/edit_text_curve_bg"
+
+                        android:hint="@string/enter_plan_details" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnSubmitFrgNextWeekVisit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/font_20"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:layout_marginRight="@dimen/font_20"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            android:background="@drawable/back_ground_button_login"
+            android:gravity="center"
+            android:padding="@dimen/padding_10dp"
+            android:text="@string/submit"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
+    <!--<TextView
+        android:id="@+id/txtDateSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:background="#703D3D"
+        android:drawableRight="@drawable/cldr"
+        android:drawableTint="@color/white"
+        android:gravity="center"
+        android:paddingLeft="@dimen/et_padding_left_right"
+        android:paddingTop="@dimen/et_padding_top_bottom"
+        android:paddingRight="@dimen/et_padding_left_right"
+        android:paddingBottom="@dimen/et_padding_top_bottom"
+        android:text="Select Date"
+        android:textColor="@color/white" />-->
+    <!--<TextView
+        android:id="@+id/tvError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="No visits found."
+        android:textSize="@dimen/font_25"
+        android:visibility="gone" />-->
+
+    <!--<LinearLayout
+        android:id="@+id/llVisitsData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_transparent_with_black_border"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_4dp"
+            android:background="@color/black_opc_50"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_5dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:gravity="center"
+                android:text="Customer Name"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_3dp"
+                android:layout_weight=".07"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="Visit Type" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".004"
+                android:background="@color/dividerColor" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".49"
+                android:gravity="center"
+                android:text="Visit Date"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_15"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5dp" />
+    </LinearLayout>-->
+
+
+</LinearLayout>

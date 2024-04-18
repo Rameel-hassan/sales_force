@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ibrahim.salesforce.activity.DashBoard_Activity">
+  <ScrollView
+      android:id="@+id/screnn"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/recycler_view"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" />
+
+
+          <LinearLayout
+              android:layout_gravity="center"
+              android:layout_marginTop="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+
+              <TextView
+                  android:layout_marginLeft="@dimen/font_10"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Visits This Month"
+                  android:textStyle="bold"
+                  android:textAlignment="center"
+                  android:textColor="@color/black"
+                  android:layout_gravity="right"/>
+
+              <com.razerdp.widget.animatedpieview.AnimatedPieView
+                  android:layout_alignParentLeft="true"
+                  android:id="@+id/pie_char_school"
+                  android:layout_gravity="center"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  />
+
+              <TextView
+                  android:textAlignment="center"
+                  android:layout_marginRight="@dimen/font_10"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Visits Last Month"
+                  android:layout_gravity="left"
+                  android:textColor="@color/black"
+                  android:textStyle="bold"
+                  android:layout_alignParentRight="true"
+                  />
+
+              <com.razerdp.widget.animatedpieview.AnimatedPieView
+                  android:layout_alignParentRight="true"
+                  android:id="@+id/pie_char_school_"
+                  android:layout_gravity="center"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+
+                  />
+              <TextView
+                  android:textAlignment="center"
+                  android:layout_marginRight="@dimen/font_10"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="New Schools Today"
+                  android:layout_gravity="left"
+                  android:textColor="@color/black"
+                  android:textStyle="bold"
+                  android:layout_alignParentRight="true"
+                  />
+
+              <com.razerdp.widget.animatedpieview.AnimatedPieView
+                  android:layout_alignParentRight="true"
+                  android:id="@+id/pie_char_school_visits_today"
+                  android:layout_gravity="center"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+
+                  />
+              <TextView
+                  android:textAlignment="center"
+                  android:layout_marginRight="@dimen/font_10"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Today Visits"
+                  android:layout_gravity="left"
+                  android:textColor="@color/black"
+                  android:textStyle="bold"
+                  android:layout_alignParentRight="true"
+                  />
+
+              <com.razerdp.widget.animatedpieview.AnimatedPieView
+                  android:layout_alignParentRight="true"
+                  android:id="@+id/pie_char_school_add_new_schools_today"
+                  android:layout_gravity="center"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  />
+
+          </LinearLayout>
+      </LinearLayout>
+  </ScrollView>
+
+  <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:visibility="gone"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="lecho.lib.hellocharts.samples.ComboLineColumnChartActivity"
+        tools:ignore="MergeRootFrame" />
+
+
+
+
+
+   <LinearLayout
+         android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+
+
+
+        <com.intrusoft.scatter.PieChart
+            android:id="@+id/pie_char_school"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            scatter:aboutChart="About Your Chart"
+            scatter:aboutTextColor="@color/aboutTextColor"
+            scatter:centerColor="@color/transparent"
+            scatter:chartColor="@color/chartBackgroundColor"
+            scatter:equalPartition="false"
+            scatter:textColor="@color/colorPrimary" />
+
+
+      </LinearLayout>
+
+  </LinearLayout>-->
+
+</LinearLayout>

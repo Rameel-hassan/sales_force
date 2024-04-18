@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screenBackground"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/font_10"
+            app:cardCornerRadius="4dp"
+            android:elevation="@dimen/spacing_5dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/font_10"
+                android:paddingBottom="@dimen/font_15"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/font_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/font_20"
+                    android:layout_marginLeft="@dimen/font_20"
+                    android:background="@drawable/spinner_bg">
+
+                    <Spinner
+                        android:id="@+id/spnSoDropDown"
+                        style="@style/SpinnerStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:padding="@dimen/font_10"
+                        android:spinnerMode="dropdown" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/font_10"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="@dimen/font_20"
+                    android:layout_marginLeft="@dimen/font_20"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/date_picker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_10dp"
+                        android:background="@drawable/edit_text_curve_bg"
+                        android:focusableInTouchMode="false"
+                        android:editable="false"
+                        android:hint="Select Date">
+
+                    </EditText>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/font_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="Date From "
+                        android:textSize="17dp"
+                        android:layout_marginLeft="@dimen/font_10"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" Date From"
+                        android:drawablePadding="@dimen/font_10"
+                        android:layout_centerInParent="true"
+                        android:textSize="17dp"
+                        android:drawableRight="@drawable/cc"
+                        android:layout_marginRight="@dimen/font_10"
+                        android:background="@drawable/textboxborder"
+                        android:textColor="@color/green"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/font_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="Date To "
+                        android:textSize="17dp"
+                        android:layout_marginLeft="@dimen/font_10"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=" Date To"
+                        android:layout_centerInParent="true"
+                        android:textSize="17dp"
+                        android:layout_marginRight="@dimen/font_10"
+                        android:background="@drawable/textboxborder"
+                        android:drawableRight="@drawable/cc"
+                        android:textColor="@color/green"/>
+                </LinearLayout>
+                <Button
+                    android:textColor="@color/white"
+                    android:text="Fetch Route"
+                    android:layout_marginRight="@dimen/font_20"
+                    android:layout_marginLeft="@dimen/font_20"
+                    android:id="@+id/btnFetchData"
+                    android:background="@drawable/back_ground_button_login"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="Search Location"
+            android:textColor="@color/black"
+            android:inputType="textPersonName"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+
+            android:text="Search"/>
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/distanceTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/spacing_30dp"
+        android:hint="Total Distance"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:inputType="textPersonName"/>
+</LinearLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MainActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+</LinearLayout>

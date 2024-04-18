@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="radiogroup" type="id"></item>
+    <item name="tv_title_sp_city" type="id" />
+    <item name="tv_title_sp_area" type="id" />
+    <item name="tv_title_sp_session_date" type="id" />
+    <item name="tv_title_syll_date" type="id" />
+    <item name="tv_title_working_priority" type="id" />
+    <item name="tv_title_sp_zone" type="id" />
+    <item name="tv_title_sp_sub_area" type="id" />
+    <item name="tv_title_sp_institute_type" type="id" />
+    <item name="publisher_layout" type="id" />
+    <item name="current_publishers_text" type="id" />
+    <item name="show_publishers" type="id" />
+    <item name="list_of_publishers" type="id" />
+    <item name="etPublishers" type="id" />
+    <item name="btnAddPublishers" type="id" />
+</resources>

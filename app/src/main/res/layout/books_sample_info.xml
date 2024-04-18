@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_40dp"
+    android:layout_marginBottom="@dimen/margin_2dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        android:id="@+id/tv_item_srl_no"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight=".10"
+        android:gravity="center"
+        android:text="@string/item_code"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/rgtr_btn_stroke_bg"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight=".3"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/rgtr_btn_stroke_bg"
+        android:gravity="center"
+        android:text="@string/item_name"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_item_total_quantity"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight=".2"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/rgtr_btn_stroke_bg"
+        android:gravity="center"
+        android:text="Total QTY"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_item_delivered_qty"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight=".2"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/rgtr_btn_stroke_bg"
+        android:gravity="center"
+        android:text="Del QTY"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_item_remaining_qty"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight=".2"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/rgtr_btn_stroke_bg"
+        android:gravity="center"
+        android:text="Rem QTY"
+        android:textStyle="bold" />
+
+</LinearLayout>
