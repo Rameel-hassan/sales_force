@@ -26,7 +26,6 @@ import com.ibrahim.salesforce.fragment.SchoolRegFragment
 import com.ibrahim.salesforce.fragment.SessionWiseSchools
 import com.ibrahim.salesforce.fragment.SetNextWeekVisitPlanFragment
 import com.ibrahim.salesforce.fragment.ShopRegFragment
-import com.ibrahim.salesforce.services.LocationUpdateService
 import com.ibrahim.salesforce.utilities.AppKeys
 
 class FragmentShownActivity : AppCompatActivity(){
@@ -127,14 +126,14 @@ class FragmentShownActivity : AppCompatActivity(){
         }
         return true
     }
-    public fun stopLocationServiceIfRunning() {
-        if (isMyServiceRunning(LocationUpdateService::class.java)) {
-            Log.d("FragmentMainActivity", "onCreate: isMyServiceRunning = true")
-            stopService(Intent(this@FragmentShownActivity, LocationUpdateService::class.java))
-        } else {
-            Log.d("FragmentMainActivity", "onCreate: isMyServiceRunning = false")
-        }
-    }
+//    public fun stopLocationServiceIfRunning() {
+//        if (isMyServiceRunning(LocationUpdateService::class.java)) {
+//            Log.d("FragmentMainActivity", "onCreate: isMyServiceRunning = true")
+//            stopService(Intent(this@FragmentShownActivity, LocationUpdateService::class.java))
+//        } else {
+//            Log.d("FragmentMainActivity", "onCreate: isMyServiceRunning = false")
+//        }
+//    }
 
     fun isMyServiceRunning(serviceClass: Class<*>): Boolean {
         val manager = getSystemService(ACTIVITY_SERVICE) as ActivityManager

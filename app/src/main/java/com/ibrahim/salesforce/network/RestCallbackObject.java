@@ -76,7 +76,10 @@ public class RestCallbackObject implements Callback {
                 Log.e("onSuccess onResponse", new Gson().toJson(response.body()));
             }
             try {
-                callback.onSuccess(response.body(), requestCode);
+                if (response.body()==null)
+                    callback.onFailure(response.body().toString(), requestCode);
+                else
+                    callback.onSuccess(response.body(), requestCode);
             } catch (Throwable t) {
                 //Exception caught from response.body() method
                 callback.onFailure(NetworkErrorHandler.get(context, t), requestCode);

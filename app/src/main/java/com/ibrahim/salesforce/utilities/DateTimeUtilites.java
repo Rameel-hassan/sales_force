@@ -36,7 +36,7 @@ public class DateTimeUtilites {
 
         Date todayDate = Calendar.getInstance().getTime();
         String dt = "";
-        SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd hh:mm a");
+        SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
         dateFormatter.setTimeZone(TimeZone.getDefault());
         dt = dateFormatter.format(todayDate);
         return dt;

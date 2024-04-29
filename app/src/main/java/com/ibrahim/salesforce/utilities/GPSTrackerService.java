@@ -55,8 +55,8 @@ public class GPSTrackerService extends Service implements LocationListener {
     boolean canGetLocation = false;
 
     Location location;
-    double latitude;
-    double longitude;
+    static public double latitude;
+    static public double longitude;
 
     public class LocalBinder extends Binder {
         public GPSTrackerService getService(Context context) {

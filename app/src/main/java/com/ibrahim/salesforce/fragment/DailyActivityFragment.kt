@@ -6,7 +6,6 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.app.ProgressDialog
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -34,6 +33,7 @@ import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.LatLng
+import com.ibrahim.salesforce.activity.DashboardActivity
 import com.ibrahim.salesforce.activity.FragmentShownActivity
 import com.ibrahim.salesforce.base.SFApplication.TAG
 import com.ibrahim.salesforce.databinding.FragmentTestBinding
@@ -41,8 +41,6 @@ import com.ibrahim.salesforce.model.SampleSearchModel
 import com.ibrahim.salesforce.network.RequestCode
 import com.ibrahim.salesforce.network.RestService
 import com.ibrahim.salesforce.response.*
-import com.ibrahim.salesforce.services.DBLocationPointsSyncService
-import com.ibrahim.salesforce.services.LocationUpdateService
 import com.ibrahim.salesforce.utilities.AppKeys
 import com.ibrahim.salesforce.utilities.Constants
 import com.ibrahim.salesforce.utilities.Utility.BatteryOptimization
@@ -56,8 +54,6 @@ import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 import java.util.*
 
 
@@ -143,7 +139,6 @@ class DailyActivityFragment : androidx.fragment.app.Fragment() {
 
     companion object {
         private const val MY_FINE_LOCATION_REQUEST = 99
-        private const val MY_BACKGROUND_LOCATION_REQUEST = 100
         private val IMAGE_DIRECTORY = "/GOHAR ATTENDANCE IMAGES"
         fun newInstance(): DailyActivityFragment {
             return DailyActivityFragment()
@@ -205,7 +200,7 @@ class DailyActivityFragment : androidx.fragment.app.Fragment() {
             }
         })
 
-        if ((activity as FragmentShownActivity?)!!.isMyServiceRunning(LocationUpdateService::class.java)) {
+        if (true) {
             locationEnabled = true
             Log.d("FragmentMainActivity", "onCreate: isMyServiceRunning = true")
         } else {
@@ -282,7 +277,6 @@ class DailyActivityFragment : androidx.fragment.app.Fragment() {
                         )
                         == PackageManager.PERMISSION_GRANTED
                     ) {
-                        requestBackgroundLocationPermission()
                     }
 
                 } else {
@@ -307,31 +301,6 @@ class DailyActivityFragment : androidx.fragment.app.Fragment() {
                 return
             }
 
-            MY_BACKGROUND_LOCATION_REQUEST -> {
-
-                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    if (ContextCompat.checkSelfPermission(
-                            requireContext(),
-                            Manifest.permission.ACCESS_FINE_LOCATION
-                        )
-                        == PackageManager.PERMISSION_GRANTED
-                    ) {
-                        Toast.makeText(
-                            requireContext(),
-                            "Background location Permission Granted",
-                            Toast.LENGTH_LONG
-                        ).show()
-                    }
-                } else {
-                    Toast.makeText(
-                        requireContext(),
-                        "Background location permission denied",
-                        Toast.LENGTH_LONG
-                    )
-                        .show()
-                }
-                return
-            }
 
         }
     }
@@ -391,53 +360,8 @@ class DailyActivityFragment : androidx.fragment.app.Fragment() {
                             requireContext(),
                             Manifest.permission.ACCESS_FINE_LOCATION
                         )
-                        == PackageManager.PERMISSION_GRANTED
-                    ) {
-
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-
-                            if (ActivityCompat.checkSelfPermission(
-                                    requireContext(),
-                                    Manifest.permission.ACCESS_BACKGROUND_LOCATION
-                                )
-                                != PackageManager.PERMISSION_GRANTED
-                            ) {
-
-                                AlertDialog.Builder(requireContext()).apply {
-                                    setTitle("Background permission")
-                                    setMessage(com.ibrahim.salesforce.R.string.background_location_permission_message)
-                                    setPositiveButton("Start service anyway",
-                                        DialogInterface.OnClickListener { dialog, id ->
-                                            fusedLocationClient.lastLocation
-                                                .addOnSuccessListener { location: Location? ->
-                                                    // Got last known location. In some rare situations this can be null.
-                                                    latitudeget = location!!.latitude
-                                                    longitudeget = location!!.longitude
-                                                    val context = HashMap<String, Double>()
-                                                    context.put("startLatitude", latitudeget!!)
-                                                    context.put("startLongitude", longitudeget!!)
-                                                    val current = LocalDateTime.now()
-                                                    val formatter =
-                                                        DateTimeFormatter.ofPattern("dd-MM-yyyy")
-                                                    val formatted = current.format(formatter)
-                                                    val userName = mLoginResponse.Data.Name
-
-                                                }
-                                        })
-                                    setNegativeButton("Grant background Permission",
-                                        DialogInterface.OnClickListener { dialog, id ->
-                                            requestBackgroundLocationPermission()
-                                        })
-                                }.create().show()
-
-                            }
-                        }
-                    } else if (ActivityCompat.checkSelfPermission(
-                            requireContext(),
-                            Manifest.permission.ACCESS_FINE_LOCATION
-                        )
                         != PackageManager.PERMISSION_GRANTED
-                    ) {
+                    ){
                         if (ActivityCompat.shouldShowRequestPermissionRationale(
                                 requireActivity(),
                                 Manifest.permission.ACCESS_FINE_LOCATION
@@ -643,8 +567,6 @@ class DailyActivityFragment : androidx.fragment.app.Fragment() {
     override fun onResume() {
         super.onResume()
 
-        val serviceIntent = Intent(activity, DBLocationPointsSyncService::class.java)
-        activity?.let { ContextCompat.startForegroundService(it, serviceIntent) }
     }
 
     private fun RequestPermission(): Boolean {
@@ -673,18 +595,15 @@ class DailyActivityFragment : androidx.fragment.app.Fragment() {
         if (RequestPermission()) {
             Log.d(TAG, "start service")
             locationEnabled = true
-            ContextCompat.startForegroundService(
-                this.requireActivity(),
-                Intent(this.requireContext(), LocationUpdateService::class.java)
-            )
+
         }
     }
 
     private fun stopService() {
 
-        if ((activity as FragmentShownActivity?)!!.isMyServiceRunning(LocationUpdateService::class.java)) {
+        if (true) {
             Log.d("FragmentMainActivity", "onCreate: isMyServiceRunning = true")
-            (activity as FragmentShownActivity?)!!.stopLocationServiceIfRunning()
+            (activity as DashboardActivity?)!!.startStopRoute(false)
             locationEnabled = false;
         }
 
@@ -1421,13 +1340,7 @@ class DailyActivityFragment : androidx.fragment.app.Fragment() {
         }
     }
 
-    private fun requestBackgroundLocationPermission() {
-        ActivityCompat.requestPermissions(
-            requireActivity(),
-            arrayOf(Manifest.permission.ACCESS_BACKGROUND_LOCATION),
-            MY_BACKGROUND_LOCATION_REQUEST
-        )
-    }
+
 
     private fun requestFineLocationPermission() {
         ActivityCompat.requestPermissions(

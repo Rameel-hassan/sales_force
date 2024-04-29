@@ -1,11 +1,9 @@
 package com.ibrahim.salesforce.activity;
 
 import static android.graphics.Color.TRANSPARENT;
-import static com.ibrahim.salesforce.utilities.AppPreference.FIRST_TIME_APP_RUN;
 
 import android.Manifest;
 import android.app.Activity;
-import android.app.ActivityManager;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ComponentName;
@@ -44,7 +42,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
@@ -74,10 +71,7 @@ import com.ibrahim.salesforce.response.GetServerResponse;
 import com.ibrahim.salesforce.response.MainDashboardEntry;
 import com.ibrahim.salesforce.response.ServerResponse;
 import com.ibrahim.salesforce.response.TodayActiveReminders;
-import com.ibrahim.salesforce.services.DBLocationPointsSyncService;
-import com.ibrahim.salesforce.services.LocationUpdateService;
 import com.ibrahim.salesforce.utilities.AppKeys;
-import com.ibrahim.salesforce.utilities.AppPreference;
 import com.ibrahim.salesforce.utilities.BadgeDrawable;
 import com.ibrahim.salesforce.utilities.DateTimeUtilites;
 import com.ibrahim.salesforce.utilities.GPSTrackerService;
@@ -238,18 +232,12 @@ public class DashboardActivity extends AppCompatActivity implements
 
 //        appVersion.setText("V: " + versionName);
 
-        boolean isAutoStartEnabled = AppPreference.getSavedData(getApplicationContext(), FIRST_TIME_APP_RUN);
-        if (!isAutoStartEnabled) {
-//            enableAutoStart();
-            showAutoStartScreen();
-            AppPreference.saveData(getApplicationContext(), true, FIRST_TIME_APP_RUN);
 
-        }
 
 //        initGui(SFApplication.getAppResources().getString(R.string.dashboard));
         Log.d("class_name", this.getClass().getSimpleName());
         Paper.init(this);
-        runServiceIfAlreadyPresent();
+        mLoginResponse = Paper.book().read(AppKeys.KEY_LOGIN_RESPONSE);
 
         if(mLoginResponse.getData().getIsRouteStarted()){
             mStartStopRouteBtn.setText(getResources().getString(R.string.stop));
@@ -274,7 +262,6 @@ public class DashboardActivity extends AppCompatActivity implements
     }
 
     private void showDialogStartStopRoute() {
-        boolean isStatred = true;
         String title = "";
         if (mLoginResponse.getData().getIsRouteStarted())
             title = "Stop Route";
@@ -286,7 +273,7 @@ public class DashboardActivity extends AppCompatActivity implements
                 .setMessage(
                         "Are you sure \n you want to " + title)
                 .setPositiveButton("ALLOW", (dialogInterface, i) -> {
-                    startStopRoute();
+                    startStopRoute(! mLoginResponse.getData().getIsRouteStarted());
 
                 })
                 .setNegativeButton("Cancel", (dialog, which) -> {
@@ -296,11 +283,10 @@ public class DashboardActivity extends AppCompatActivity implements
 
     }
 
-    private void startStopRoute() {
+
+
+    public void startStopRoute(boolean isStarted) {
         RouteDetail routeDetail = new RouteDetail();
-
-
-
 
 
         mService = RestClient.getInstance(this);
@@ -315,15 +301,13 @@ public class DashboardActivity extends AppCompatActivity implements
 
         routeDetail.setUserID(mLoginResponse.getData().getSOID());
 
-        if (!mLoginResponse.getData().getIsRouteStarted()) {
+        if (!isStarted) {
 
 
             routeDetail.setStartingTime(DateTimeUtilites.getCurrentDateTime());
-            routeDetail.setStartingLat(LocationUpdateService.lastKnownLat);
-            routeDetail.setStartingLong(LocationUpdateService.lastKnownLong);
+            routeDetail.setStartingLat(GPSTrackerService.latitude);
+            routeDetail.setStartingLong(GPSTrackerService.longitude);
             routeDetail.setStartingPhone(Build.MODEL);
-
-
 
 
 
@@ -333,8 +317,8 @@ public class DashboardActivity extends AppCompatActivity implements
 
 
             routeDetail.setEndingTime(DateTimeUtilites.getCurrentDateTime());
-            routeDetail.setEndingLat(LocationUpdateService.lastKnownLat);
-            routeDetail.setEndingLong(LocationUpdateService.lastKnownLong);
+            routeDetail.setEndingLat(GPSTrackerService.latitude);
+            routeDetail.setEndingLong(GPSTrackerService.longitude);
             routeDetail.setEndingPhone(Build.MODEL);
 
             userObject = mService.saveEndingLatLng(routeDetail);
@@ -346,61 +330,6 @@ public class DashboardActivity extends AppCompatActivity implements
     }
 
 
-    private void showAutoStartScreen() {
-        final Intent[] POWERMANAGER_INTENTS = {
-                new Intent().setComponent(new ComponentName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity")),
-                new Intent().setComponent(new ComponentName("com.letv.android.letvsafe", "com.letv.android.letvsafe.AutobootManageActivity")),
-                new Intent().setComponent(new ComponentName("com.huawei.systemmanager", "com.huawei.systemmanager.startupmgr.ui.StartupNormalAppListActivity")),
-                new Intent().setComponent(new ComponentName("com.huawei.systemmanager", "com.huawei.systemmanager.optimize.process.ProtectActivity")),
-                new Intent().setComponent(new ComponentName("com.huawei.systemmanager", "com.huawei.systemmanager.appcontrol.activity.StartupAppControlActivity")),
-                new Intent().setComponent(new ComponentName("com.coloros.safecenter", "com.coloros.safecenter.permission.startup.StartupAppListActivity")),
-                new Intent().setComponent(new ComponentName("com.coloros.safecenter", "com.coloros.safecenter.startupapp.StartupAppListActivity")),
-                new Intent().setComponent(new ComponentName("com.oppo.safe", "com.oppo.safe.permission.startup.StartupAppListActivity")),
-                new Intent().setComponent(new ComponentName("com.iqoo.secure", "com.iqoo.secure.ui.phoneoptimize.AddWhiteListActivity")),
-                new Intent().setComponent(new ComponentName("com.iqoo.secure", "com.iqoo.secure.ui.phoneoptimize.BgStartUpManager")),
-                new Intent().setComponent(new ComponentName("com.vivo.permissionmanager", "com.vivo.permissionmanager.activity.BgStartUpManagerActivity")),
-                new Intent().setComponent(new ComponentName("com.samsung.android.lool", "com.samsung.android.sm.ui.battery.BatteryActivity")),
-                new Intent().setComponent(new ComponentName("com.htc.pitroad", "com.htc.pitroad.landingpage.activity.LandingPageActivity")),
-                new Intent().setComponent(new ComponentName("com.asus.mobilemanager", "com.asus.mobilemanager.MainActivity")), new Intent().setComponent(new ComponentName("com.transsion.phonemanager", "com.itel.autobootmanager.activity.AutoBootMgrActivity"))
-        };
-
-        for (Intent intent : POWERMANAGER_INTENTS)
-            if (getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
-                // show dialog to ask user action
-                new AlertDialog.Builder(DashboardActivity.this).setTitle("Enable AutoStart")
-                        .setMessage(
-                                "Please allow Sales Automation to always run in the background,else our services can't be accessed.")
-                        .setPositiveButton("ALLOW", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-
-                                try {
-                                    startActivity(intent);
-                                } catch (SecurityException e) {
-
-                                    new AlertDialog.Builder(DashboardActivity.this).setTitle("Enable AutoStart")
-                                            .setTitle("Error Occured")
-                                            .setMessage(
-                                                    "Open this apps settings and allow it to always run in the background.")
-                                            .setPositiveButton("ok", new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialogInterface, int i) {
-                                                    dialogInterface.dismiss();
-                                                }
-                                            })
-                                            .show();
-
-                                } finally {
-                                    dialogInterface.dismiss();
-                                }
-                            }
-                        })
-                        .show();
-
-                break;
-            }
-
-    }
 
     private ProgressDialog mDialog;
 
@@ -437,42 +366,6 @@ public class DashboardActivity extends AppCompatActivity implements
             nav_Menu.findItem(R.id.get_visit).setVisible(true);
         }
 
-    }
-
-    private void runServiceIfAlreadyPresent() {
-        mLoginResponse = Paper.book().read(AppKeys.KEY_LOGIN_RESPONSE);
-        getDashBoardEntries(mLoginResponse.getData().getSOID());
-
-        if (mLoginResponse.getData().getIsMarked() && !mLoginResponse.getData().getIsCheckOut()) {
-            if (!isMyServiceRunning(LocationUpdateService.class)) {
-                Log.d("FragmentMainActivity", "onCreate: isMyServiceRunning = true");
-                startService(new Intent(getApplicationContext(), LocationUpdateService.class));
-
-            }
-        } else {
-            stopLocationServiceIfRunning();
-        }
-
-    }
-
-    public void stopLocationServiceIfRunning() {
-        if (isMyServiceRunning(LocationUpdateService.class)) {
-            Log.d("FragmentMainActivity", "onCreate: isMyServiceRunning = true");
-            stopService(new Intent(DashboardActivity.this, LocationUpdateService.class));
-
-        } else {
-            Log.d("FragmentMainActivity", "onCreate: isMyServiceRunning = false");
-        }
-    }
-
-    protected boolean isMyServiceRunning(Class<?> serviceClass) {
-        ActivityManager manager = (ActivityManager) DashboardActivity.this.getSystemService(Context.ACTIVITY_SERVICE);
-        for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
-            if (serviceClass.getName().equals(service.service.getClassName())) {
-                return true;
-            }
-        }
-        return false;
     }
 
     private RuntimePermissionHandler.PermissionListener mPermissionListener = new RuntimePermissionHandler.PermissionListener() {
@@ -676,12 +569,12 @@ public class DashboardActivity extends AppCompatActivity implements
         @Override
         public void onLocationChanged(Location location) {
 
-            LocationUpdateService.lastKnownLat = location.getLatitude();
-            LocationUpdateService.lastKnownLong = location.getLongitude();
+            GPSTrackerService.latitude = location.getLatitude();
+            GPSTrackerService.longitude = location.getLongitude();
 
             /*if(geoLocation.getWebID()==null)
              getPlaceId(lat, lon);*/
-            locationManager.removeUpdates(locationListener);
+//            locationManager.removeUpdates(locationListener);
         }
 
         @Override
@@ -731,8 +624,8 @@ public class DashboardActivity extends AppCompatActivity implements
             }
 
             if (location != null) {
-                LocationUpdateService.lastKnownLat = location.getLatitude();
-                LocationUpdateService.lastKnownLong = location.getLongitude();
+                GPSTrackerService.latitude = location.getLatitude();
+                GPSTrackerService.longitude = location.getLongitude();
 //                String lat = Double.toString(location.getLatitude());
 //                String lon = Double.toString(location.getLongitude());
 //                geoLocation.setLatitude(lat);
@@ -770,11 +663,6 @@ public class DashboardActivity extends AppCompatActivity implements
             mLocationService.getLocation();
         }
         getTodayTargetedSchools(mLoginResponse.getData().getSOID());
-        //todo confirm if head also make attendence
-//        if (!mLoginResponse.getData().getIsRegionalHead()) {
-        Intent serviceIntent = new Intent(DashboardActivity.this, DBLocationPointsSyncService.class);
-        ContextCompat.startForegroundService(DashboardActivity.this, serviceIntent);
-//        }
     }
 
     public static GPSTrackerService mLocationService = new GPSTrackerService();
@@ -1144,12 +1032,13 @@ public class DashboardActivity extends AppCompatActivity implements
                 mDialog.hide();
             }
         } else if(requestCode == RequestCode.API_START_ROUTE_DETAILS){
-                mLoginResponse.getData().setIsRouteStarted(true);
-                mStartStopRouteBtn.setText(getResources().getText(R.string.stop));
-                if (mDialog.isShowing()) {
+            mLoginResponse.getData().setIsRouteStarted(true);
+            mStartStopRouteBtn.setText(getResources().getText(R.string.stop));
+            if (mDialog.isShowing()) {
                     mDialog.hide();
                 }
         } else if(requestCode == RequestCode.API_END_ROUTE_DETAILS){
+
                 mLoginResponse.getData().setIsRouteStarted(false);
                 mStartStopRouteBtn.setText(getResources().getText(R.string.start));
                 if (mDialog.isShowing()) {
