@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".dialoge.DetailsDialogFragment">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:background="@drawable/round_signin_btn"
+                android:gravity="center"
+                android:padding="@dimen/margin_5dp"
+                android:text="@string/information"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/font_25"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:text="@string/select_region"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_16"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/spn_width"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_20dp"
+                android:layout_weight=".28"
+                android:background="@drawable/spinner_bg"
+                android:orientation="horizontal"
+
+                >
+
+                <Spinner
+                    android:id="@+id/spn_region"
+                    style="@style/spinnerTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:spinnerMode="dropdown" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:text="Select City"
+                android:textColor="@color/colorPrimary"
+
+                android:textSize="@dimen/font_16"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/spn_width"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_20dp"
+                android:layout_weight=".28"
+                android:background="@drawable/spinner_bg"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spn_city"
+                    style="@style/spinnerTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:spinnerMode="dropdown"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:text="Enter Area"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_16"
+
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rl_region_areas"
+                android:layout_width="@dimen/spn_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_3dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_sub_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Area Name"
+                    android:inputType="textPersonName"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnCheckIn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_20dp"
+                android:background="@drawable/commentedittxt_bg"
+                android:text="Add New Area"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

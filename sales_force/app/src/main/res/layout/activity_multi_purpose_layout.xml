@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.MultiPurposeActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/edit_text_curve_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:text="Select Sale Officer"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_16"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10dp"
+                android:background="@drawable/commentedittxt_bg"
+                android:layout_marginTop="@dimen/margin_3dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spnSale_Officer"
+                    style="@style/SpinnerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"></Spinner>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:text="Select Visit Purpose"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_16"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_3dp"
+                android:background="@drawable/commentedittxt_bg"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spnVisit_Purpose"
+                    style="@style/SpinnerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/etNoOfSchools"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/commentedittxt_bg"
+                android:gravity="center"
+                android:hint="Enter No. Of Schools"
+                android:inputType="number"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/etRemarks"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/commentedittxt_bg"
+                android:gravity="center"
+                android:hint="Enter Remarks" />
+
+            <Button
+                android:id="@+id/btnPostData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_30dp"
+                android:background="@drawable/back_ground_button_login"
+                android:onClick="postData"
+                android:text="Submit"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

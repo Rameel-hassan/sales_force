@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".dialoge.DetailsDialogFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_signin_btn"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:text="@string/reset_location"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/font_25"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".28"
+            android:text="Retailer Type"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_weight=".28"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_school"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#000000"
+                android:checked="true"
+                android:foregroundTint="#000000"
+                android:text="School"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/rb_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:buttonTint="#000000"
+                android:foregroundTint="#000000"
+                android:text="Shop"
+                android:textColor="#000000" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:text="@string/select_region"
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/spn_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_3dp"
+            android:background="@drawable/spinner_bg"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spn_region"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+
+                />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:text="Select City"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:layout_width="@dimen/spn_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_3dp"
+            android:background="@drawable/spinner_bg"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spn_City_ResetLatLong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:text="Select Areas"
+            android:textColor="@color/colorPrimary"
+
+            android:textSize="@dimen/font_16"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:layout_width="@dimen/spn_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_3dp"
+            android:background="@drawable/spinner_bg"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spn_pop_reset_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_customer"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:textSize="@dimen/font_16"
+            android:textColor="@color/colorPrimary"
+
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:id="@+id/rl_region_customers"
+            android:layout_width="@dimen/spn_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_3dp"
+            android:background="@drawable/spinner_bg"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spn_customers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnResetLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_20dp"
+            android:background="@drawable/back_ground_button_login"
+            android:text="@string/reset"
+
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

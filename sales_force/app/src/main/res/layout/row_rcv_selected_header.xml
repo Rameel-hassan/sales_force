@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:gravity="left"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txtHeaderSubjName"
+        android:layout_width="70dp"
+        android:layout_height="@dimen/margin_30dp"
+        android:background="@drawable/rgtr_btn_stroke_bg"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:text="Subject"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtHeaderClassName"
+        android:layout_width="110dp"
+        android:layout_height="@dimen/margin_30dp"
+        android:background="@drawable/rgtr_btn_stroke_bg"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+
+        android:text="Class"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/txtHeaderSeries"
+        android:layout_width="@dimen/margin_30dp"
+        android:layout_height="@dimen/margin_30dp"
+        android:background="@drawable/rgtr_btn_stroke_bg"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+
+        android:text="Ser"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtHeaderDelievered"
+        android:layout_width="44dp"
+        android:layout_height="@dimen/margin_30dp"
+        android:background="@drawable/rgtr_btn_stroke_bg"
+        android:gravity="center"
+        android:text="Del"
+
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtHeaderReturn"
+        android:layout_width="37dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/rgtr_btn_stroke_bg"
+        android:textColor="@color/colorPrimary"
+
+        android:gravity="center"
+
+        android:text="Ret"
+        android:textStyle="bold" />
+</LinearLayout>

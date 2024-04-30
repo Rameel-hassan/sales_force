@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="exam_boards" >
+        <item>Select Exam Board</item>
+        <item>MATRIC BOARD</item>
+        <item>O-LEVEL</item>
+        <item>A-LEVEL</item>
+        <item>FEDRAL BOARD</item>
+        <item>AGA KHAN BOARD</item>
+        <item>MULTIPLE BOARDS</item>
+    </string-array>
+</resources>

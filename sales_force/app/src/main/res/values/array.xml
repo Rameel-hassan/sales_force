@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="arr_url">
+        <item>http://</item>
+        <item>http://58.27.209.14:8976/api/</item>
+        <item>http://jbd.salesforcepk.com/api/</item>
+        <item>http://gp.salesforcepk.com/api/</item>
+        <item>http://salesforce.jbdpress.com/api/</item>
+    </string-array>
+
+    <string-array name="array_postive_or_negative">
+        <item>+</item>
+        <item>-</item>
+    </string-array>
+</resources>

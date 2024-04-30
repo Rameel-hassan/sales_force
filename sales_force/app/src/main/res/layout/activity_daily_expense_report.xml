@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    tools:context=".activity.DailyExpenseReport">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/font_10"
+    app:cardCornerRadius="4dp"
+    android:elevation="@dimen/spacing_5dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/font_10"
+        android:paddingBottom="@dimen/font_15"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/font_10"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/font_20"
+            android:layout_marginLeft="@dimen/font_20"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_bg">
+
+            <Spinner
+                android:id="@+id/spnSoDropDown"
+                style="@style/SpinnerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/font_10"
+            android:layout_marginRight="@dimen/font_10"
+            android:layout_marginTop="@dimen/font_10"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_from_visit_date"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@color/orange"
+                android:drawableRight="@drawable/cldr"
+                android:drawableTint="@color/white"
+                android:hint="Date From  "
+                android:paddingLeft="@dimen/et_padding_left_right"
+                android:paddingTop="@dimen/et_padding_top_bottom"
+                android:paddingRight="@dimen/et_padding_left_right"
+                android:paddingBottom="@dimen/et_padding_top_bottom"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@color/tv_color"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_to_visit_date"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/orange"
+                android:drawableRight="@drawable/cldr"
+                android:drawableTint="@color/white"
+                android:hint=" Date To  "
+                android:paddingLeft="@dimen/et_padding_left_right"
+                android:paddingTop="@dimen/et_padding_top_bottom"
+                android:paddingRight="@dimen/et_padding_left_right"
+                android:paddingBottom="@dimen/et_padding_top_bottom"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textCursorDrawable="@color/tv_color"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/font_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="Date From "
+                android:textSize="17dp"
+                android:layout_marginLeft="@dimen/font_10"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" Date From"
+                android:drawablePadding="@dimen/font_10"
+                android:layout_centerInParent="true"
+                android:textSize="17dp"
+                android:drawableRight="@drawable/cc"
+                android:layout_marginRight="@dimen/font_10"
+                android:background="@drawable/textboxborder"
+                android:textColor="@color/green"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/font_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="Date To "
+                android:textSize="17dp"
+                android:layout_marginLeft="@dimen/font_10"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" Date To"
+                android:layout_centerInParent="true"
+                android:textSize="17dp"
+                android:layout_marginRight="@dimen/font_10"
+                android:background="@drawable/textboxborder"
+                android:drawableRight="@drawable/cc"
+                android:textColor="@color/green"/>
+        </LinearLayout>
+        <Button
+            android:textColor="@color/white"
+            android:text="Download"
+            android:id="@+id/btnDownload"
+            android:background="@drawable/back_ground_button_login"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/font_10"
+            android:layout_marginLeft="@dimen/font_10"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

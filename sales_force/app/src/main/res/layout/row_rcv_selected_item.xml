@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginTop="@dimen/margin_1dp"
+    android:layout_margin="5dp"
+    android:weightSum="1"
+    android:background="@drawable/rgtr_btn_stroke_bg"
+    android:textColor="@color/colorPrimary"
+
+    >
+<TextView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight=".30"
+    android:id="@+id/txtSubjectName"
+    android:text="English"
+    android:textColor="@color/colorPrimary"
+
+    android:textStyle="bold"
+    />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtClassName"
+        android:text="Class 7"
+        android:textColor="@color/colorPrimary"
+
+        android:layout_weight=".24"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".06"
+        android:id="@+id/tvPublishers"
+        android:text="P"
+        android:textColor="@color/colorPrimary"
+
+        android:layout_marginLeft="@dimen/margin_1dp"
+        android:background="@drawable/bg_border"
+        android:layout_marginRight="3dp"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSeries"
+        android:text="Ser"
+        android:textColor="@color/colorPrimary"
+
+        android:textStyle="bold"
+        android:layout_weight=".13"
+        android:background="@drawable/bg_border"
+        />
+
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_Delieverd"
+        android:layout_marginLeft="2dp"
+        android:layout_weight=".10"
+        />
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_ReturnCollection"
+        android:layout_marginLeft="2dp"
+        android:layout_weight=".10"
+        />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ib_delete_Class"
+        android:src="@drawable/ic_delete_black_24dp"
+        android:background="@color/transparent"
+        android:layout_weight=".07"
+        />
+
+</LinearLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="60dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/my_visits"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="70dp"
+            android:background="@drawable/roundededge_shape"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/my_visits"
+            app:layout_constraintEnd_toEndOf="@+id/my_visits"
+            app:layout_constraintStart_toStartOf="@+id/my_visits"
+            app:layout_constraintTop_toTopOf="@+id/my_visits" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/my_visits"
+            app:layout_constraintEnd_toEndOf="@+id/my_visits"
+            app:layout_constraintStart_toStartOf="@+id/my_visits"
+            app:layout_constraintTop_toTopOf="@+id/my_visits"/>
+
+
+        <TextView
+            android:id="@+id/groupsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/century_gothic"
+            android:text="Visits"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/my_visits"
+            app:layout_constraintEnd_toEndOf="@+id/my_visits"
+            app:layout_constraintStart_toStartOf="@+id/my_visits"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        </TextView>
+
+
+        <LinearLayout
+            android:id="@+id/total_sample_demand"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="70dp"
+            android:background="@drawable/roundededge_shape"
+            android:orientation="horizontal"
+
+            app:layout_constraintEnd_toEndOf="@+id/my_visits"
+            app:layout_constraintStart_toStartOf="@+id/my_visits"
+            app:layout_constraintTop_toBottomOf="@+id/my_visits">
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/total_sample_demand"
+            app:layout_constraintEnd_toEndOf="@+id/total_sample_demand"
+            app:layout_constraintStart_toStartOf="@+id/total_sample_demand"
+            app:layout_constraintTop_toTopOf="@+id/total_sample_demand" />
+
+        <ImageView
+            android:id="@+id/imageviewtask2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/total_sample_demand"
+            app:layout_constraintEnd_toEndOf="@+id/total_sample_demand"
+            app:layout_constraintStart_toStartOf="@+id/total_sample_demand"
+            app:layout_constraintTop_toTopOf="@+id/total_sample_demand" />
+
+
+        <TextView
+            android:id="@+id/tasksTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/century_gothic"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Total Sample Demand"
+            app:layout_constraintBottom_toBottomOf="@+id/total_sample_demand"
+            app:layout_constraintEnd_toEndOf="@+id/total_sample_demand"
+            app:layout_constraintStart_toStartOf="@+id/total_sample_demand"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_task"/>
+
+        <LinearLayout
+            android:id="@+id/total_final_visit"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="70dp"
+            android:background="@drawable/roundededge_shape"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/total_sample_demand"
+            app:layout_constraintStart_toStartOf="@+id/total_sample_demand"
+            app:layout_constraintTop_toBottomOf="@+id/total_sample_demand">
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView_conferencce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/total_final_visit"
+            app:layout_constraintEnd_toEndOf="@+id/total_final_visit"
+            app:layout_constraintStart_toStartOf="@+id/total_final_visit"
+            app:layout_constraintTop_toTopOf="@+id/total_final_visit" />
+
+        <ImageView
+            android:id="@+id/imageviewconference_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/total_final_visit"
+            app:layout_constraintEnd_toEndOf="@+id/total_final_visit"
+            app:layout_constraintStart_toStartOf="@+id/total_final_visit"
+            app:layout_constraintTop_toTopOf="@+id/total_final_visit" />
+
+        <TextView
+            android:id="@+id/conference_tvid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/century_gothic"
+            android:text="Total Final Visits"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/total_final_visit"
+            app:layout_constraintEnd_toEndOf="@+id/total_final_visit"
+            app:layout_constraintStart_toStartOf="@+id/total_final_visit"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_conferencce"/>
+
+
+
+        <LinearLayout
+            android:id="@+id/total_sample_delivery"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="70dp"
+            android:background="@drawable/roundededge_shape"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/total_final_visit"
+            app:layout_constraintStart_toStartOf="@+id/total_final_visit"
+            app:layout_constraintTop_toBottomOf="@+id/total_final_visit">
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/total_sample_delivery"
+            app:layout_constraintEnd_toEndOf="@+id/total_sample_delivery"
+            app:layout_constraintStart_toStartOf="@+id/total_sample_delivery"
+            app:layout_constraintTop_toTopOf="@+id/total_sample_delivery" />
+
+        <ImageView
+            android:id="@+id/imageviewconference_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/total_sample_delivery"
+            app:layout_constraintEnd_toEndOf="@+id/total_sample_delivery"
+            app:layout_constraintStart_toStartOf="@+id/total_sample_delivery"
+            app:layout_constraintTop_toTopOf="@+id/total_sample_delivery" />
+
+        <TextView
+            android:id="@+id/message_tvid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/century_gothic"
+            android:text="Total Sample Deliver"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/total_sample_delivery"
+            app:layout_constraintEnd_toEndOf="@+id/total_sample_delivery"
+            app:layout_constraintStart_toStartOf="@+id/total_sample_delivery"
+            app:layout_constraintTop_toBottomOf="@+id/imageviewconference_message"/>
+
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/Meetings_id"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:layout_margin="70dp"-->
+<!--            android:background="@drawable/roundededge_shape"-->
+<!--            android:orientation="horizontal"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/Masseges_categry"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/Masseges_categry"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/Masseges_categry">-->
+
+<!--        </LinearLayout>-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/MeetingsimageView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/circularimage"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/Meetings_id"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/Meetings_id"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/Meetings_id"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/Meetings_id" />-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/ic_video_meetings"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/Meetings_id"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/Meetings_id"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/Meetings_id"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/Meetings_id"/>-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/meetingTv"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/century_gothic"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="20dp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/Meetings_id"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/Meetings_id"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/Meetings_id"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/MeetingsimageView">-->
+
+<!--        </TextView>-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

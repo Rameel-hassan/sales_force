@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/font_10"
+
+    app:cardElevation="4dp"
+    app:cardCornerRadius="@dimen/spacing_10dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/font_20">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <!-- TODO: Update blank fragment layout -->
+
+                <RelativeLayout
+                    android:layout_marginLeft="@dimen/font_20"
+                    android:layout_marginRight="@dimen/font_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    android:layout_weight=".28"
+                    android:background="@drawable/spinner_bg"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spndayInOut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:spinnerMode="dropdown" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llLeaveOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_10dp"
+
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/spacing_10dp"
+                            android:text="Total Leaves" />
+
+                        <TextView
+                            android:id="@+id/tv_total_leaves"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/spacing_10dp"
+                            android:text="_" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/spacing_10dp"
+                            android:text="Acquired Leaves"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_acq_leaves"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/spacing_10dp"
+
+                            android:text="_" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etReasonLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/font_20"
+                        android:layout_marginTop="@dimen/margin_20dp"
+                        android:layout_marginEnd="@dimen/font_20"
+                        android:focusableInTouchMode="true"
+                        app:hintEnabled="true"
+                        android:hint="Reason For Leave">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etReason"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_50dp"
+                            android:focusableInTouchMode="true"
+                            android:inputType="text"
+                            android:textColor="@color/tv_color"
+                            android:textColorHint="@color/et_hint_color"
+                            android:textSize="14sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOpStartingTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/font_20"
+                        android:layout_marginTop="@dimen/margin_20dp"
+                        android:layout_marginRight="@dimen/font_20"
+                        android:layout_weight=".28"
+                        android:background="@drawable/spinner_bg"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spnRegion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dropdown" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/font_20"
+                        android:layout_marginTop="@dimen/margin_20dp"
+                        android:layout_marginRight="@dimen/font_20"
+                        android:layout_weight=".28"
+                        android:background="@drawable/spinner_bg"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spnCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dropdown" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/font_20"
+                        android:layout_marginTop="@dimen/margin_20dp"
+                        android:layout_marginRight="@dimen/font_20"
+                        android:layout_weight=".28"
+                        android:background="@drawable/spinner_bg"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spnArea"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dropdown" />
+                    </RelativeLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight=".28"
+                        android:hint="Enter Meter Value">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etMeterValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <!--<RelativeLayout
+                        android:layout_marginLeft="@dimen/font_20"
+                        android:layout_marginRight="@dimen/font_20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_20dp"
+                        android:layout_weight=".28"
+                        android:background="@drawable/spinner_bg"
+                        android:orientation="horizontal">
+                        <Spinner
+                            android:id="@+id/spnVisitPurpose"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dropdown" />
+                    </RelativeLayout>-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOpLeavingTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Enter Meter Value">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etMeterOutValue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_meter_out"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="centerInside"
+
+                            app:srcCompat="@drawable/ic_photo_camera_68dp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="20dp"
+                        android:hint="Total Meter KMs">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etTotalMeterKms"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:inputType="number"
+                            android:textColorHint="#595959" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/font_20"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="@dimen/font_20"
+                        android:hint="Total System KMs"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etTotalSystemKms"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_50dp"
+                            android:focusableInTouchMode="true"
+                            android:inputType="number" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin_50dp"
+                        android:layout_marginLeft="@dimen/font_20"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="@dimen/font_20"
+                        android:hint="Total Fare"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etTotalFare"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_50dp"
+                            android:inputType="number" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Transport">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etTransport"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <ImageView
+                            android:id="@+id/ivTransport"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+
+                            app:srcCompat="@drawable/ic_photo_camera_68dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Night Stay">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etNigthStay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <ImageView
+                            android:id="@+id/ivNigthStay"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+
+                            app:srcCompat="@drawable/ic_photo_camera_68dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Food">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etFood"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <ImageView
+                            android:id="@+id/ivFood"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+
+                            app:srcCompat="@drawable/ic_photo_camera_68dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Other">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etOther"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <ImageView
+                            android:id="@+id/ivOther"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:srcCompat="@drawable/ic_photo_camera_68dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/uploadimage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/font_20"
+                    android:src="@drawable/ic_photo_camera_68dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnupload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Take a Picture"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnsbmt"
+                    android:layout_marginTop="@dimen/font_10"
+                    android:background="@drawable/back_ground_button_login"
+                    android:layout_marginRight="@dimen/font_20"
+                    android:layout_marginLeft="@dimen/font_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:text="Mark Attendance"/>
+                <Button
+                    android:id="@+id/maps_routes"
+                    android:layout_marginTop="@dimen/font_10"
+                    android:background="@drawable/back_ground_button_login"
+                    android:layout_marginRight="@dimen/font_20"
+                    android:layout_marginLeft="@dimen/font_20"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:text="Maps and Routes"/>
+
+                <Button
+                    android:id="@+id/stop_service_btn"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/font_10"
+                    android:background="@drawable/back_ground_button_login"
+                    android:layout_marginRight="@dimen/font_20"
+                    android:layout_marginLeft="@dimen/font_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:text="stop Tracking"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

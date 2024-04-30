@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black_heading">#28333a</color>
+    <color name="white_opc_85">#D9ffffff</color>
+    <color name="white_opc_50">#80ffffff</color>
+    <color name="black_opc_50">#80000000</color>
+    <color name="black_opc_25">#40000000</color>
+    <color name="photo_header">#D9414141</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="publisher_background">#DFDFDF</color>
+
+
+
+    <!--<color name="et_bg_color">#a27665</color>-->
+    <color name="et_hint_color">#393939</color>
+    <color name="tv_color">#000000</color>
+    <color name="color_white">#ffffff</color>
+    <color name="view_bg">#b20e0f</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="innercolor">#475059</color>
+    <color name="red">#FFD7D4D4</color>
+    <color name="green">#29ba9b</color>
+    <color name="login">#b7b7b7</color>
+    <color name="black">#000</color>
+    <color name="yellow">#c2d912</color>
+    <color name="materialcolor">#ff5722</color>
+    <color name="mycolor">@color/colorPrimary</color>
+    <color name="screenBackground">#F1F1F1</color>
+    <color name="normal">#245c8e</color>
+    <color name="pressed">#4e91c8</color>
+    <color name="blue">#0000FF</color>
+    <color name="firstColor">#29ba9b</color>
+    <color name="secondColor">#57acce</color>
+    <color name="thirdColor">@color/colorPrimary</color>
+    <color name="fourthColor">#F6D96D</color>
+    <color name="fifthColor">#f99f38</color>
+    <color name="sixthColor">#e96c5a</color>
+    <color name="seventhColor">#ee783d</color>
+    <color name="eigthColor">#cc4844</color>
+    <color name="ninthColor">@color/colorPrimary</color>
+    <color name="lightGreenColor">#54B948</color>
+    <color name="DarkGreenColor">#008F11</color>
+    <color name="dividerColor">#22000000</color>
+    <color name="strongGreenCyan">@color/colorPrimary</color>
+    <color name="StrongBlueColor">@color/colorPrimary</color>
+    <color name="StrongDarkCyan">@color/colorPrimary</color>
+    <color name="StrongTealColor">@color/colorPrimary</color>
+    <color name="PecaneColor">#4A2512</color>
+    <color name="backDashboardColor">#DCDCDC</color>
+    <color name="lightGreyColor">#F4F4F4</color>
+    <color name="gray">#5C5454</color>
+    <color name="orange">#FF9100</color>
+    <color name="divider1">#616161</color>
+    <color name="bell_red">#C50D00</color>
+</resources>

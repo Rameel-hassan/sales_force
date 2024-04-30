@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_5dp">
+
+    <LinearLayout
+        android:id="@+id/llRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_12dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tv_customer_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:maxLines="1"
+            android:textSize="@dimen/font_12"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin_2dp"
+            android:text="@string/customer_name" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".004"
+            android:background="@color/dividerColor"/>
+
+        <TextView
+            android:id="@+id/tv_visit_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".39"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:maxLines="1"
+            android:textSize="@dimen/font_12"
+            android:text="@string/visit_time" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".004"
+            android:background="@color/dividerColor"/>
+
+        <TextView
+            android:id="@+id/tvReschedule"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".30"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/padding_2dp"
+            android:text="@string/reschedule"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font_12"
+            android:textStyle="bold" />
+
+        <View
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".004"
+            android:background="@color/dividerColor"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".12"
+            android:gravity="center"
+            android:textSize="@dimen/font_12"
+            android:textStyle="bold"
+            android:padding="@dimen/padding_2dp"
+            android:textColor="@color/blue"
+            android:text="@string/delete" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

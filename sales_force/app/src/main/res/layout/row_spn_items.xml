@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight=".65"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimary"
+        android:paddingLeft="@dimen/padding_10dp"
+        android:singleLine="true"
+        android:text="@string/item_name"
+        android:textSize="@dimen/font_15" />
+
+    <EditText
+        android:id="@+id/np_qty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".2"
+        android:background="@drawable/spinner_bg"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="4"
+        android:maxLines="3"
+        android:text="1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight=".05" />
+
+    <CheckBox
+        android:id="@+id/cb_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".1" />
+</LinearLayout>

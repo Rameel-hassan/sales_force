@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <group
+        android:checkableBehavior="single"
+        tools:showIn="nav_view">
+        <item
+            android:id="@+id/dashbaord"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Dashbaord"
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/online_attendance"
+            android:icon="@drawable/ic_attendance"
+            android:title="Online Attendance"
+
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/school_registration"
+            android:icon="@drawable/ic_add_new_school"
+            android:title="Vendor Registration"
+
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/manage_books_samples_info"
+            android:icon="@drawable/ic_edit_info"
+            android:title="Manage Samples"
+            android:visible="false"
+            app:iconTint="@color/color_white" />
+
+
+        <item
+            android:id="@+id/update_school"
+            android:icon="@drawable/ic_edit_info"
+            android:title="Update Vendor"
+
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/add_targeted_school"
+            android:icon="@drawable/ic_schools_session"
+            android:title="Targeted Products"
+            app:iconTint="@color/color_white" />
+
+        <item
+            android:id="@+id/online_schools"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Online Visits"
+
+            app:iconTint="@color/color_white" />
+
+        <item
+            android:id="@+id/offline_school"
+            android:icon="@drawable/ic_offline_visits"
+            android:title="Offline visits"
+
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/targeted_school"
+            android:icon="@drawable/ic_schools_session"
+            android:title="Targeted School"
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/mi_sale_history"
+            android:icon="@drawable/ic_sample_history"
+            android:title="Sample history" />
+        <item
+            android:id="@+id/my_visits"
+            android:icon="@drawable/ic_my_visits"
+            android:title="My Visits"
+
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/visit_map_view"
+            android:icon="@drawable/ic_map_view"
+            android:title="Visit Map View"
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/mi_visit_history"
+            android:icon="@drawable/ic_visit_history"
+            android:title="Visit History" />
+        <item
+            android:id="@+id/mi_not_interested_visit"
+            android:icon="@drawable/ic_not_interested"
+            android:title="Not Interested Visit" />
+        <item
+            android:id="@+id/routeHostory"
+            android:icon="@drawable/route"
+            android:title="@string/map_routes"
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/session_wise_school"
+            android:icon="@drawable/ic_schools_session"
+            android:title="Session Wise School"
+
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/multi_purpose_visit"
+            android:icon="@drawable/ic_multi_purpose"
+            android:visible="false"
+            android:title="Multi Purpose Visit"
+            app:iconTint="@color/color_white" />
+
+        <item
+            android:id="@+id/reset_location"
+            android:icon="@drawable/ic_reset_location"
+            android:title="Reset Location"
+            android:visible="false"
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/expense_sheets"
+            android:icon="@drawable/ic_report_1"
+            android:title="Expense Sheets"
+
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/near_by_school"
+            android:icon="@drawable/ic_map_view"
+            android:title="Near By Schools"
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/reminders"
+            android:icon="@drawable/ic_reminders"
+            android:title="Reminders"
+
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/current_location"
+            android:icon="@drawable/ic_my_location_68dp"
+            android:title="My Current Location"
+
+            app:iconTint="@color/color_white" />
+
+        <item
+            android:id="@+id/live_tracking"
+            android:icon="@drawable/ic_edit_info"
+            android:title="Live Tracking"
+            android:visible="false"
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/set_visit"
+            android:icon="@drawable/ic_activity_details"
+            android:title="Set Visit Plan"
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/get_visit"
+            android:icon="@drawable/ic_edit_info"
+            android:title="Get Visit Plan"
+            android:visible="false"
+            app:iconTint="@color/color_white" />
+
+        <item
+            android:id="@+id/shop_registration"
+            android:icon="@drawable/ic_add_new_shop"
+            android:title="Shop Registration"
+            android:visible="false"
+            app:iconTint="@color/color_white" />
+        <item
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/keyicon"
+            app:iconTint="@color/color_white"
+            android:title="Logout" />
+
+    </group>
+</menu>
