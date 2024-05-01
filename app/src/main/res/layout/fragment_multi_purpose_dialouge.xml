@@ -178,7 +178,6 @@
             android:id="@+id/tv_select_syllabus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/ib_show_items"
             android:padding="@dimen/padding_5dp"
             android:text="Select All Dealers"
             android:textColor="@color/tv_color"
